@@ -1,0 +1,247 @@
+/* Enhanced index.css */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+/* Body Styling */
+body {
+  background-color: #f8f9fa;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #343a40;
+  min-height: 100vh;
+}
+
+/* Title Styling */
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+/* Card Styling */
+.card {
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  border-radius: 10px 10px 0 0 !important;
+  padding: 1rem;
+}
+
+/* Button Styling */
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-success {
+  background-color: #2a9d8f;
+  border-color: #2a9d8f;
+}
+
+.btn-success:hover {
+  background-color: #26857a;
+  border-color: #26857a;
+}
+
+.btn-primary {
+  background-color: #3a506b;
+  border-color: #3a506b;
+}
+
+.btn-primary:hover {
+  background-color: #2d3e53;
+  border-color: #2d3e53;
+}
+
+.btn-danger {
+  background-color: #e63946;
+  border-color: #e63946;
+}
+
+/* Timer Styling */
+.timer-display {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #3a506b;
+  margin: 20px 0;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* To-Do List Styling */
+.list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.list-group-item:first-child {
+  border-top: none;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.task-list {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.task-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+/* Progress Bar Styling */
+.progress {
+  height: 10px;
+  border-radius: 5px;
+}
+
+/* Alert Styling */
+.alert {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Control Styling */
+.form-control {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  padding: 0.5rem 0.75rem;
+}
+
+.form-control:focus {
+  border-color: #3a506b;
+  box-shadow: 0 0 0 0.25rem rgba(58, 80, 107, 0.25);
+}
+
+/* Background color shades */
+.bg-primary {
+  background-color: #3a506b !important;
+}
+
+.bg-info {
+  background-color: #5e72e4 !important;
+}
+
+.bg-success {
+  background-color: #2a9d8f !important;
+}
+
+/* Cute GIF Styling */
+.cute-gif-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 3px solid #fff;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cute-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gif-toggle-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.gif-toggle-btn:hover {
+  opacity: 1;
+}
+
+.show-gif-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Media queries for responsive gif size */
+@media (max-width: 767px) {
+  .cute-gif-container {
+    width: 90px;
+    height: 90px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .show-gif-btn {
+    width: 35px;
+    height: 35px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
