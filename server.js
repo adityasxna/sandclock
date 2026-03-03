@@ -177,7 +177,7 @@ const server = http.createServer((req, res) => {
   res.end();
 });
 
-const wss = new WebSocket.Server({ server });
+const wss = new WebSocket.Server({ server, verifyClient: () => true });
 
 wss.on('connection', (ws) => {
   const clientId = randomId();
@@ -373,6 +373,8 @@ wss.on('connection', (ws) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`[study-dashboard] WS server listening on http://localhost:${PORT}`);
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`[study-dashboard] WS server listening on port ${PORT}`);
 });
+
+
